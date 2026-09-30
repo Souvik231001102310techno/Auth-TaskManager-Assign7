@@ -1,0 +1,166 @@
+.tasks-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 45px 25px 70px;
+  animation: tasksAppear 0.6s ease both;
+}
+
+.tasks-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.tasks-label {
+  color: #8d7cff;
+  font-size: 0.65rem;
+  font-weight: 900;
+  letter-spacing: 2.5px;
+}
+
+.tasks-header h1 {
+  margin-top: 8px;
+  color: white;
+  font-size: 2.35rem;
+}
+
+.tasks-header p {
+  margin-top: 8px;
+  color: #777c91;
+  font-size: 0.8rem;
+}
+
+.tasks-header button {
+  padding: 13px 19px;
+  border: none;
+  border-radius: 11px;
+  background:
+    linear-gradient(
+      100deg,
+      #7c5cff,
+      #00bce8
+    );
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.tasks-header button:hover {
+  transform: translateY(-3px);
+}
+
+.tasks-toolbar {
+  display: flex;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.tasks-toolbar input,
+.tasks-toolbar select {
+  height: 45px;
+  padding: 0 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 11px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.035);
+  color: white;
+  font-size: 0.72rem;
+}
+
+.tasks-toolbar input {
+  flex: 1;
+}
+
+.tasks-toolbar select {
+  width: 190px;
+}
+
+.tasks-toolbar select option {
+  background: #111426;
+}
+
+.tasks-toolbar input:focus,
+.tasks-toolbar select:focus {
+  border-color:
+    rgba(124, 92, 255, 0.55);
+}
+
+.tasks-count {
+  margin: 18px 0;
+  color: #62677c;
+  font-size: 0.68rem;
+}
+
+.tasks-count strong {
+  color: #9d95ff;
+}
+
+.tasks-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(3, 1fr);
+  gap: 18px;
+}
+
+.empty-tasks {
+  padding: 80px 20px;
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  text-align: center;
+}
+
+.empty-tasks h2 {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.empty-tasks p {
+  margin-top: 8px;
+  color: #696e82;
+  font-size: 0.72rem;
+}
+
+@keyframes tasksAppear {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 950px) {
+  .tasks-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .tasks-page {
+    padding: 30px 18px 50px;
+  }
+
+  .tasks-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .tasks-toolbar {
+    flex-direction: column;
+  }
+
+  .tasks-toolbar select {
+    width: 100%;
+  }
+
+  .tasks-grid {
+    grid-template-columns: 1fr;
+  }
+}

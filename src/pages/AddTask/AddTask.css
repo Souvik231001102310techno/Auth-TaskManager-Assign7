@@ -1,0 +1,71 @@
+.add-task-page {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 45px 25px 70px;
+  animation: addTaskAppear 0.6s ease both;
+}
+
+.add-task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 30px;
+}
+
+.add-task-header span {
+  color: #8d7cff;
+  font-size: 0.65rem;
+  font-weight: 900;
+  letter-spacing: 2.5px;
+}
+
+.add-task-header h1 {
+  margin-top: 8px;
+  color: white;
+  font-size: 2.35rem;
+}
+
+.add-task-header p {
+  margin-top: 8px;
+  color: #777c91;
+  font-size: 0.8rem;
+}
+
+.add-task-header button {
+  padding: 11px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #a8acbc;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.add-task-header button:hover {
+  color: white;
+  transform: translateX(-3px);
+}
+
+@keyframes addTaskAppear {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .add-task-page {
+    padding: 30px 18px 50px;
+  }
+
+  .add-task-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+}

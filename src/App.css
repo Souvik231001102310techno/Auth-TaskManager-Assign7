@@ -1,0 +1,24 @@
+#root {
+  min-height: 100vh;
+}
+
+.task-layout {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(124, 92, 255, 0.06),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 90%,
+      rgba(0, 217, 255, 0.04),
+      transparent 30%
+    ),
+    #080a16;
+}
+
+.page-content {
+  min-height: calc(100vh - 78px);
+  width: 100%;
+}
